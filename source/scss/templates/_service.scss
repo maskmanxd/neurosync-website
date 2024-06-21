@@ -1,0 +1,48 @@
+.service{
+	padding-top:180px;
+
+	.service-item{
+		background: $light;
+		padding: 10px;
+		border-radius:5px;
+		height: auto;
+	}
+
+	.icon{
+		float: left;
+		margin-bottom: 10px;
+	}
+	i{
+		color: $secondary-color;
+	}
+	h4{
+		padding-left: 20px;
+	}
+
+	.content{
+		clear: both;
+	}
+}
+
+//  Service-2
+
+
+.service-block{
+	padding: 20px;
+	margin-top: 40px;
+	border:1px solid rgba(0,0,0,0.03);
+	box-shadow: 0 0 38px rgba(21,40,82,.07);
+	min-height: 730px;
+
+	img{
+		width: 100%;
+		margin-top: -60px;
+		border:5px solid $light;
+	}
+
+}
+
+.b-0{
+	bottom: 0;
+}
+

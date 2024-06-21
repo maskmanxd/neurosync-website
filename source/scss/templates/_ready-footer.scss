@@ -1,0 +1,33 @@
+.ready-footer {
+    // background: url("../images/bg/bg-4.jpg")no-repeat 50% 50%;
+    // background-size: cover;
+    position: relative;
+    overflow: hidden;
+    // background-color: rgba(34, 58, 102, .95);
+    // filter: blur(10px);
+}
+
+.bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg/bg-4.jpg")no-repeat 50% 50%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    z-index: -1;
+    /* Ensure the blur layer is behind other content */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.ready-title-color {
+    color: $secondary-color;
+}
