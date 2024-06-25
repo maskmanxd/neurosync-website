@@ -5,7 +5,7 @@
     color: $black;
     font-family: $primary-font;
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 20px;
     transition: all .25s ease;
   }
   .nav-link:hover,
@@ -15,7 +15,7 @@
 }
 
 .navbar {
-  padding: 0 !important;
+  // padding: 0 !important;
 }
 
 .dropdown-toggle::after {

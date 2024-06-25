@@ -71,7 +71,7 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
 }
 .btn-main-2 {
   background: $secondary-color;
-  color: $light;
+  color: $light !important;
   border-color:$secondary-color;
  
   &:hover {
