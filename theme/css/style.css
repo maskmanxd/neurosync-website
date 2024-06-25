@@ -259,11 +259,11 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .text-sm {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .text-med {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 36px;
 }
 
@@ -651,7 +651,7 @@ a:focus {
   color: #223a66;
 }
 .feature-item p {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .feature-section.border-top {
@@ -900,6 +900,9 @@ a:focus {
 }
 .testimonial-block i {
   font-size: 60px;
+}
+.testimonial-block .icofont-quote-right {
+  font-size: 60px;
   position: absolute;
   right: 46px;
   bottom: 89px;
@@ -936,7 +939,7 @@ a:focus {
   clear: both;
   background: transparent;
 }
-.testimonial-block.style-2 i {
+.testimonial-block.style-2 .icofont-quote-right {
   bottom: -20px;
   color: #e12454;
   opacity: 0.3;

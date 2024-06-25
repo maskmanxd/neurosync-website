@@ -166,8 +166,15 @@
 		}
 		if ($(window).scrollTop() > oTop) {
 			$('.counter').each(function () {
-				var $this = $(this),
-					countTo = $this.attr('data-count');
+				var $this = $(this);
+
+				if ($this.hasClass('animated')) return;
+
+				var countTo = $this.attr('data-count'),
+					dataUnit = $this.attr('data-unit');
+				
+				$this.addClass('animated'); // Mark this counter as animated
+				
 				$({
 					countNum: $this.text()
 				}).animate({
@@ -176,10 +183,10 @@
 					duration: 500,
 					easing: 'swing',
 					step: function () {
-						$this.text(Math.floor(this.countNum));
+						$this.text(Math.floor(this.countNum) + dataUnit);
 					},
 					complete: function () {
-						$this.text(this.countNum);
+						$this.text(this.countNum + dataUnit);
 					}
 				});
 			});

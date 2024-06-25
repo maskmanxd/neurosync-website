@@ -32,7 +32,11 @@
 		}
 	}
 
-	i{
+	i {
+		font-size: 60px;
+	}
+	
+	.icofont-quote-right{
 		font-size: 60px;
 		position: absolute;
 		right: 46px;
@@ -80,7 +84,7 @@
 		background: transparent;
 	}
 
-	i {
+	.icofont-quote-right {
 	    bottom: -20px;
 	    color: $secondary-color;
 	    opacity: .3;
