@@ -106,7 +106,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block text-center">
-          <h1 class="text-capitalize mb-5 text-lg">Intake Forms</h1>
+          <h1 class="text-capitalize mb-5 text-lg">Patient Referral</h1>
           <span class="text-white"></span>
         </div>
       </div>
@@ -114,173 +114,115 @@
   </div>
 </section>
 
-<section class="section about-tms-therapy-page">
-    <div class="container">
-        <h3 class="title-color">
-            CHECK OUR PROVIDED PATIENT FORMS AVAILABLE FOR DOWNLOAD</h3>
-        <div class="divider my-4"></div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="about-img mt-4 mt-lg-0">
-                    <img src="images/about/intake-form-pic.png" alt
-                        class="img-fluid">
-                </div>
-            </div>
-            <div class="col-lg-6 text-med">
-                <p class="text-med">We are excited to meet you and discuss your
-                    mental health issues and objectives. We make every effort to
-                    adhere to our scheduled appointments. In order to expedite
-                    your check-in process, we suggest completing the patient
-                    forms available on this page prior to your visit. If you
-                    encounter any problems with the forms or require assistance
-                    from a specialist, please do not hesitate to contact us
-                    using the office number provided below. 
-                    In the event that you encounter difficulty downloading our
-                    patient forms or documents, we suggest arriving 15 to 30
-                    minutes before your appointment to allow sufficient time for
-                    completion.
-                </p>
 
-                <h3 class="title-color mt-90 gray-bg p-4 btn-round-full"> FOR
-                    ANY QUESTIONS,
-                    PLEASE REACH OUT TO US AT <a class="title-color"
-                        href="tel:253-234-4199">253-234-4199</a></h3>
-            </div>
+<section class="appoinment section">
+    <div class="container">
+        <div class="appoinment-wrap mt-5 mt-lg-0 pl-lg-5">
+            <h3 class="mb-2 title-color">Looking to refer a patient to NeuroSync TMS Therapy in University Place Washington? <br/> Please complete the below form and we'll reach out to the patient directly. Thank you!</h3>
+            <form id="appointment-form" class="appoinment-form" method="post" action="#">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h3 class="mb-2 title-color">Patient's Info</h3>
+                        <div class="divider mb-4"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_name" name="patient_name" class="form-control" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="email" id="patient_email" name="patient_email" class="form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_phone" name="patient_phone" class="form-control" placeholder="Phone" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_country" name="patient_country" class="form-control" placeholder="Country" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_address" name="patient_address" class="form-control" placeholder="Address" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_address_ext" name="patient_address_ext" class="form-control" placeholder="Apt/Suite/Other (Optional)">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_city" name="patient_city" class="form-control" placeholder="City" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_state" name="patient_state" class="form-control" placeholder="State" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_postal" name="patient_postal" class="form-control" placeholder="Postal Code" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="patient_dob" name="patient_dob" class="form-control" placeholder="Date of Birth (mm/dd/yyyy)" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h3 class="mb-2 mt-4 title-color">Referring Provider's Info</h3>
+                        <div class="divider mb-4"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="provider_name" name="provider_name" class="form-control" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="email" id="provider_email" name="provider_email" class="form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="provider_phone" name="provider_phone" class="form-control" placeholder="Phone" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="provider_address" name="provider_address" class="form-control" placeholder="Address" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="provider_fax" name="provider_fax" class="form-control" placeholder="Fax (Optional)">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group-2 mb-4">
+                    <textarea id="referral_reason" name="referral_reason" class="form-control" rows="3" placeholder="Reason for Referral" required></textarea>
+                </div>
+                <div class="form-group-2 mb-4">
+                    <textarea id="add_note" name="add_note" class="form-control" rows="3" placeholder="Additional Notes (Optional)"></textarea>
+                </div>
+                <button type="submit" class="btn btn-main btn-round-full">Submit Referral</button>
+            </form>
         </div>
     </div>
 </section>
 
-<section class="section service-2">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-5">
-                    <img src="images/service/service-1.jpg" alt
-                        class="img-fluid">
-                    <div class="content">
-                        <h4 class="mt-4 mb-2 title-color">TMS REGISTRATION</h4>
-                        <p class="mb-4 text-sm">Our TMS Registration Form pdf is based
-                            on the same information that will be required on
-                            your insurance's prior authorization form. While we
-                            understand the form can be tedious to complete, it's
-                            important in order to receive TMS treatment.</p>
-                        <a href="https://irp.cdn-website.com/902baffd/files/uploaded/1.0%20Adult%20TMS%20Registration.pdf" target="_blank"
-                            class="btn btn-main-2 btn-round-full mt-3 b-0">Download<i
-                                class="icofont-simple-right ml-2  "></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-5">
-                    <img src="images/service/service-2.jpg" alt
-                        class="img-fluid">
-                    <div class="content">
-                        <h4 class="mt-4 mb-2  title-color">TMS EXCLUSION
-                            CRITERIA</h4>
-                        <p class="mb-4 text-sm">
-                            Please complete the following pdf form prior to the
-                            start of your TMS treatment. If you have selected
-                            any of the boxes under the Contraindicated Section,
-                            then TMS therapy is contraindicated, and therefore,
-                            would not be a viable treatment option for you.</p>
-                        <a href="https://irp.cdn-website.com/902baffd/files/uploaded/2.0%20TMS%20Exclusion%20Criteria.pdf" target="_blank"
-                            class="btn btn-main-2 btn-round-full mt-3">Download<i
-                                class="icofont-simple-right ml-2  "></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-5">
-                    <img src="images/service/service-3.jpg" alt
-                        class="img-fluid">
-                    <div class="content">
-                        <h4 class="mt-4 mb-2 title-color">MEDICATION CHECKLIST
-                        </h4>
-                        <p class="mb-4 text-sm">The following pdf contains a list of
-                            common medications that are used to treat
-                            depression. If you have brought a medication list or
-                            had your records sent from your physician's office,
-                            please fill out this form and bring those documents
-                            to your consultation.</p>
-                        <a href="https://irp.cdn-website.com/902baffd/files/uploaded/3.0%20Medication%20Checklist.pdf" target="_blank"
-                            class="btn btn-main-2 btn-round-full mt-3">Download<i
-                                class="icofont-simple-right ml-2  "></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-5 mb-lg-0">
-                    <img src="images/service/service-4.jpg" alt
-                        class="img-fluid">
-                    <div class="content">
-                        <h4 class="mt-4 mb-2 title-color">PHQ-9 AND GAD-7
-                        </h4>
-                        <p class="mb-4 text-sm">You can use the PHQ-9 and GAD-7 to
-                            screen for depression, measure the level
-                            of symptom severity in people with depression and for other anxiety
-                            disorders such as phobias and generalized anxiety
-                            disorder.</p>
-                        <a href="https://irp.cdn-website.com/902baffd/files/uploaded/4.0%20PHQ9%20and%20GAD7.pdf" target="_blank"
-                            class="btn btn-main-2 btn-round-full mt-3">Download<i
-                                class="icofont-simple-right ml-2  "></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-5 mb-lg-0">
-                    <img src="images/service/service-6.jpg" alt
-                        class="img-fluid">
-                    <div class="content">
-                        <h4 class="mt-4 mb-2 title-color">CONSENT TO
-                            RELEASE</h4>
-                        <p class="mb-4 text-sm">This Consent to Release Form allows us
-                            to disclose information related to your treatment,
-                            psychiatric history, or current medications only <br/>to
-                            specific resources that you specify.</p>
-                        <a href="https://irp.cdn-website.com/902baffd/files/uploaded/5.0%20Consent-to-Release-Information%20%281%29.pdf" target="_blank"
-                            class="btn btn-main-2 btn-round-full mt-3">Download<i
-                                class="icofont-simple-right ml-2  "></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-5 mb-lg-0">
-                    <img src="images/service/service-8.jpg" alt
-                        class="img-fluid">
-                    <div class="content">
-                        <h4 class="mt-4 mb-2 title-color">HIPAA NOTICE
-                        </h4>
-                        <p class="mb-4 text-sm">We will maintain the privacy of your
-                            health information and <br/> will not disclose your
-                            <br/>information to others without your permission, <br/>or
-                            unless the law requires us to do so.</p>
-                        <a href="https://irp.cdn-website.com/902baffd/files/uploaded/7.0%20HIPPA_Notice_10_2019%20%281%29.pdf" target="_blank"
-                            class="btn btn-main-2 btn-round-full mt-3">Download<i
-                                class="icofont-simple-right ml-2  "></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="section cta-page">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-7">
-				<div class="cta-content">
-					<div class="divider mb-4"></div>
-					<h2 class="mb-5 text-lg">Ready to get started?  <span class="title-color">Call today for a TMS consultation!</span></h2>
-					<a href="appoinment.html" class="btn btn-main-2 btn-round-full">Get an appointment<i class="icofont-simple-right  ml-2"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 <body>
 
     <div id="popup" class="popup">

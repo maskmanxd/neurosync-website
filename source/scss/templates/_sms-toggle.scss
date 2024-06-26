@@ -1,4 +1,26 @@
 /* Style for the button */
+.popup {
+    width: 260px;
+    height: 70px;
+    position: fixed;
+    bottom: 75px;
+    right: 75px;
+    background-color: $light;
+    color: $secondary-color;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: 600;
+    display: none; /* Hidden initially */
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.popup:hover {
+    display: block;
+    opacity: 1;
+}
+
 .toggle-button {
     position: fixed;
     bottom: 20px;

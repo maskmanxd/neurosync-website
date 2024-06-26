@@ -1,0 +1,17 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "Major Depression Index (MDI)",
+"description": ""
+})
+<section class="section about">
+    <div class="container">
+        <div id="mdapp-widget" app-id="153"></div>
+        <script async src="https://tools.mdapp.co/js/sdk.js"></script>
+    </div>
+</section>
+
+@@include('blocks/ready-footer.htm')
+@@include('blocks/footer.htm')
+@@include('blocks/sms-toggle.htm')
+@@include('footer.htm')

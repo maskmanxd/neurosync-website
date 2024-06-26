@@ -78,11 +78,11 @@
 						<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Patient Resources<i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown05">
-							<li><a class="dropdown-item" href="https://www.tmsandgp.com/patient-referral" target="_blank">Patient Referral</a></li>
+							<li><a class="dropdown-item" href="patient-referral.html">Patient Referral</a></li>
 							<li><a class="dropdown-item" href="intake-forms.html">Intake Forms</a></li>
-							<li><a class="dropdown-item" href="https://www.tmsandgp.com/depression-assessment-phq-9" target="_blank">Depression Assessment (PHQ-9)</a></li>
-							<li><a class="dropdown-item" href="https://www.tmsandgp.com/anxiety-assessment-gad-7" target="_blank">Anxiety Assessment (GAD-7)</a></li>
-							<li><a class="dropdown-item" href="https://www.tmsandgp.com/major-depression-screening-mdi" target="_blank">Major Depression Screening (MDI)</a></li>
+							<li><a class="dropdown-item" href="depression-assessment.html">Depression Assessment (PHQ-9)</a></li>
+							<li><a class="dropdown-item" href="anxiety-assessment.html">Anxiety Assessment (GAD-7)</a></li>
+							<li><a class="dropdown-item" href="major-depression-index.html">Major Depression Index (MDI)</a></li>
 						</ul>
 					</li>
 					<!-- <li class="nav-item dropdown">
@@ -316,6 +316,9 @@
 </section>
 <body>
 
+    <div id="popup" class="popup">
+        <p class="text-med">Got a question? click here</p>
+    </div>
     <button id="toggleButton" class="toggle-button">
         <i class="icofont-ui-chat"></i>
         <i class="icofont-close hide"></i>
@@ -356,6 +359,7 @@
             if (formContainer.style.display === 'none' || formContainer.style.display === '') {
                 formContainer.style.display = 'block';
                 setTimeout(() => formContainer.classList.add('show'), 10); // Delay to allow display change to take effect
+                popup.style.display = "none";
                 // Switch icons with transition
                 icons[0].classList.add('hide');
                 icons[1].classList.remove('hide');
@@ -389,7 +393,7 @@
 
             // Send SMS using Fetch API
             fetch('https://textbelt.com/text', {
-                method: 'post',
+                method: 'postt',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                 phone: '2083104176',
@@ -420,6 +424,18 @@
                 setTimeout(() => {successmsg.style.visibility = 'hidden'}, 9000);
             });
             this.reset();
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var popup = document.getElementById("popup");
+
+            // Show the popup when the page loads
+            popup.style.display = "block";
+            popup.style.opacity = 1;
+
+            setTimeout(function() {
+                popup.style.display = "none";
+            }, 8000);
         });
     </script>
 
@@ -506,10 +522,10 @@
 		</div>
 		<div class="footer-divider"></div>
 		<div class="row policy-bar">
-			<span class="mt-2"><a href="tel:+23-345-67890">PRIVACY POLICY </a></span>
-			<span class="mt-2"><a href="tel:+23-345-67890">© 2024
+			<span class="mt-2"><a href="privacy-policy.html">PRIVACY POLICY </a></span>
+			<span class="mt-2"><a>© 2024
 					ALL RIGHTS RESERVED NEUROSYNC TMS THERAPY</a></span>
-			<span class="mt-2"><a href="tel:+23-345-67890">TERMS & CONDITIONS</a></span>
+			<span class="mt-2"><a href="terms-conditions.html">TERMS & CONDITIONS</a></span>
 		</div>
 	</div>
 </footer>
@@ -523,8 +539,10 @@
     <script src="plugins/slick-carousel/slick/slick.min.js"></script>
     <script src="plugins/shuffle/shuffle.min.js"></script>
     <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
-    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- website functions -->
     <script src="js/script.js"></script>
+    <script src="js/patient-referral.js"></script>
 
   </body>
   </html>

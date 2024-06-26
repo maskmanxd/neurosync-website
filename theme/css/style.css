@@ -56,17 +56,33 @@ p {
   line-height: 30px;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Ensure it stays on top of other elements */
+  background-color: #fff;
+}
+
 .navbar-toggle .icon-bar {
   background: #223a66;
 }
 
-input[type=email], input[type=password], input[type=text], input[type=tel] {
+input[type=email],
+input[type=password],
+input[type=text],
+input[type=tel] {
   box-shadow: none;
   height: 45px;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
 }
-input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, input[type=tel]:focus {
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=tel]:focus {
   box-shadow: none;
   border: 1px solid #223a66;
 }
@@ -183,7 +199,9 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   border-radius: 50px;
 }
 
-.btn.active:focus, .btn:active:focus, .btn:focus {
+.btn.active:focus,
+.btn:active:focus,
+.btn:focus {
   outline: 0;
 }
 
@@ -286,7 +304,8 @@ a {
   transition: all 0.35s ease;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   color: #e12454;
   text-decoration: none;
 }
@@ -301,6 +320,7 @@ a:focus {
 }
 
 .page-title {
+  margin-top: 140px;
   padding: 120px 0px 70px 0px;
   position: relative;
 }
@@ -316,12 +336,14 @@ a:focus {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.slick-slide:focus, .slick-slide a {
+.slick-slide:focus,
+.slick-slide a {
   outline: none;
 }
 
 @media (max-width: 480px) {
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 1.3rem;
     line-height: 36px;
   }
@@ -510,6 +532,7 @@ a:focus {
   background: url("../images/bg/rainier_6.png") no-repeat;
   background-size: cover;
   min-height: 550px;
+  margin-top: 140px;
 }
 .banner .block {
   padding: 80px 0px 160px;
@@ -1456,6 +1479,28 @@ a:focus {
 }
 
 /* Style for the button */
+.popup {
+  width: 260px;
+  height: 70px;
+  position: fixed;
+  bottom: 75px;
+  right: 75px;
+  background-color: #fff;
+  color: #e12454;
+  padding: 15px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: none; /* Hidden initially */
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+  box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.popup:hover {
+  display: block;
+  opacity: 1;
+}
+
 .toggle-button {
   position: fixed;
   bottom: 20px;
