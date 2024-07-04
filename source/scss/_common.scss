@@ -8,6 +8,18 @@ header {
   background-color: $light;
 }
 
+.main-logo {
+  max-width: 300px;
+  height: auto;
+}
+
+@media (min-width:992px) {
+  .main-logo {
+    max-width: 350px;
+    height: auto;
+  }
+}
+
 .navbar-toggle .icon-bar {
   background: $primary-color;
 }
