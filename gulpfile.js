@@ -8,7 +8,6 @@ const fileinclude = require("gulp-file-include");
 const autoprefixer = require("gulp-autoprefixer");
 const bs = require("browser-sync").create();
 const rimraf = require("rimraf");
-const comments = require("gulp-header-comment");
 const jshint = require("gulp-jshint");
 const notify = require("gulp-notify");
 const plumber = require("gulp-plumber");
@@ -23,6 +22,7 @@ var path = {
     js: "source/js/*.js",
     scss: "source/scss/**/*.scss",
     images: "source/images/**/*.+(png|jpg|gif|svg)",
+    intakeForms: "source/assets/intake-forms/**/*.+(pdf)"
   },
   build: {
     dirBuild: "docs/",
@@ -40,20 +40,8 @@ gulp.task("html:build", function () {
         basepath: path.src.incdir,
       })
     )
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
-    )
     .pipe(gulp.dest(path.build.dirDev))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
+    .pipe(bs.stream());
 });
 
 // SCSS
@@ -68,20 +56,8 @@ gulp.task("scss:build", function () {
     )
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("/"))
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
-    )
     .pipe(gulp.dest(path.build.dirDev + "css/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
+    .pipe(bs.stream());
 });
 
 // Javascript
@@ -100,20 +76,8 @@ gulp.task("js:build", function () {
     )
     .pipe(jshint.reporter("jshint-stylish"))
     .on("error", gutil.log)
-    .pipe(
-      comments(`
-  WEBSITE: https://themefisher.com
-  TWITTER: https://twitter.com/themefisher
-  FACEBOOK: https://www.facebook.com/themefisher
-  GITHUB: https://github.com/themefisher/
-  `)
-    )
     .pipe(gulp.dest(path.build.dirDev + "js/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
+    .pipe(bs.stream());
 });
 
 // Images
@@ -121,11 +85,7 @@ gulp.task("images:build", function () {
   return gulp
     .src(path.src.images)
     .pipe(gulp.dest(path.build.dirDev + "images/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
+    .pipe(bs.stream());
 });
 
 // Plugins
@@ -133,11 +93,15 @@ gulp.task("plugins:build", function () {
   return gulp
     .src(path.src.plugins)
     .pipe(gulp.dest(path.build.dirDev + "plugins/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
+    .pipe(bs.stream());
+});
+
+// Intake Forms
+gulp.task("intakeForms:build", function () {
+  return gulp
+    .src(path.src.intakeForms)
+    .pipe(gulp.dest(path.build.dirDev + "assets/intake-forms/"))
+    .pipe(bs.stream());
 });
 
 // Other files like favicon, php, sourcele-icon on root directory
@@ -170,6 +134,7 @@ gulp.task("watch:build", function () {
   gulp.watch(path.src.js, gulp.series("js:build"));
   gulp.watch(path.src.images, gulp.series("images:build"));
   gulp.watch(path.src.plugins, gulp.series("plugins:build"));
+  gulp.watch(path.src.intakeForms, gulp.series("intakeForms:build"));
 });
 
 // Dev Task
@@ -182,6 +147,7 @@ gulp.task(
     "scss:build",
     "images:build",
     "plugins:build",
+    "intakeForms:build",
     "others:build",
     gulp.parallel("watch:build", function () {
       bs.init({
@@ -201,6 +167,7 @@ gulp.task(
     "js:build",
     "scss:build",
     "images:build",
-    "plugins:build"
+    "plugins:build",
+    "intakeForms:build"
   )
 );

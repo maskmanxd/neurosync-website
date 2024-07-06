@@ -1,10 +1,3 @@
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
-
 $(document).ready(function () {
     // Initialize EmailJS with your user ID
     emailjs.init("02EYv7F1Jjpshz7Ey");
