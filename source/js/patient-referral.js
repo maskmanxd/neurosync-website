@@ -39,8 +39,8 @@ $(document).ready(function () {
 
         // Send email using EmailJS
         emailjs.send("service_13jwspg", "template_8orqlo9", {
-            from_name: formData.get('patient_name'),
-            reply_to: formData.get('patient_email'),
+            from_name: 'NeuroSync Website',
+            reply_to: formData.get('provider_email'),
             message_html: emailContent
         })
             .then(function (response) {
