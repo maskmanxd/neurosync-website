@@ -73,14 +73,14 @@
 
             // SMS API endpoint and API key (replace with your actual API endpoint and key)
             var apiUrl = 'https://textbelt.com/text';
-            var apiKey = 'eff88f96a491c916c97102dfcc7f9fb43fcd2df0jyX0tqXvsO5dYWrN7Oj4PvAJs';
+            var apiKey = 'replace_with_your_key_bro';
 
             // Send SMS using Fetch API
             fetch('https://textbelt.com/text', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                phone: '2532344199',
+                phone: '123-456-7890',
                 message: outgoingMsg,
                 key: apiKey,
                 }),

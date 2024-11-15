@@ -216,17 +216,32 @@
 
 	// FAQ section dropdown
 	const items = document.querySelectorAll(".accordion button");
+	const toggleAccBtn = document.getElementById("toggle-accordian");
+	
+
+	function faqToggle() {
+		const toggleAcc = this.getAttribute('aria-pressed');
+		if (toggleAcc === 'true') {
+			this.setAttribute('aria-pressed', 'false');
+		} else {
+			this.setAttribute('aria-pressed', 'true');
+		}
+	}
+
+	toggleAccBtn.addEventListener('click', faqToggle);
 
 	function toggleAccordion() {
 		const itemToggle = this.getAttribute('aria-expanded');
-
-		for (let i = 0; i < items.length; i++) {
-			items[i].setAttribute('aria-expanded', 'false');
+		const toggleAcc = toggleAccBtn.getAttribute('aria-pressed');
+		if (toggleAcc === 'true') {
+			for (let i = 0; i < items.length; i++) {
+				items[i].setAttribute('aria-expanded', 'false');
+			}
 		}
 
 		if (itemToggle === 'false') {
 			this.setAttribute('aria-expanded', 'true');
-		}
+		} 
 	}
 
 	items.forEach(item => item.addEventListener('click', toggleAccordion));

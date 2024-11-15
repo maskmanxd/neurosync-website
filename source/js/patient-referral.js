@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    // Initialize EmailJS with your user ID
-    emailjs.init("02EYv7F1Jjpshz7Ey");
 
     // Function to send email when the form is submitted
     $('#appointment-form').submit(function (event) {
@@ -38,7 +36,7 @@ $(document).ready(function () {
 
 
         // Send email using EmailJS
-        emailjs.send("service_13jwspg", "template_8orqlo9", {
+        emailjs.send("", "", {
             from_name: 'NeuroSync Website',
             reply_to: formData.get('provider_email'),
             message_html: emailContent

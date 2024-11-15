@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    // Initialize EmailJS with your user ID
-    emailjs.init("02EYv7F1Jjpshz7Ey");
 
     // Function to send email when the form is submitted
     $('#appointment-form').submit(function (event) {
